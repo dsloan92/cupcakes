@@ -8,6 +8,10 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+//creating associate array of cupcake flavors
+$cupcakeFlavors = array("grasshopper"=>"The Grasshopper", "maple"=>"Whiskey Maple Bacon", "carrot"=>"Carrot Walnut",
+                        "caramel"=>"Salted Caramel Cupcake", "velvet"=>"Red Velvet", "lemon"=>"Lemon Drop", "tiramisu"=>"Tiramisu");
+
 ?>
 
 <!doctype html>
@@ -37,10 +41,17 @@ error_reporting(E_ALL);
         <!--Cupcake Flavor CheckBoxes-->
         <div class="form-check col-6">
             <p class = "form-group">Cupcake Flavors:</p>
-                <input  type="checkbox" name="flavors[]" id="grasshopper" value="grasshopper">
-                <label class = "form-check-label" for="grasshopper">
-                    The Grasshopper
-                </label>
+            <?php
+            //looping through cupcakeFlavor array to create checkboxes
+            foreach($cupcakeFlavors as $key=>$value) {
+                echo"
+                <input  type = \"checkbox\" name = \"flavors[]\" id = $key value = $key >
+                <label class = \"form-check-label\" for=$key>
+                $value 
+                </label >
+                <br>";
+                }
+                ?>
         </div><!--Cupcake flavors-->
 
         <!--Order Button -->
