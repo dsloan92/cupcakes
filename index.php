@@ -8,10 +8,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-//creating associate array of cupcake flavors
-$cupcakeFlavors = array("grasshopper"=>"The Grasshopper", "maple"=>"Whiskey Maple Bacon", "carrot"=>"Carrot Walnut",
-                        "caramel"=>"Salted Caramel Cupcake", "velvet"=>"Red Velvet", "lemon"=>"Lemon Drop", "tiramisu"=>"Tiramisu");
-
+include ("function.php");
 ?>
 
 <!doctype html>
@@ -34,7 +31,7 @@ $cupcakeFlavors = array("grasshopper"=>"The Grasshopper", "maple"=>"Whiskey Mapl
     <form action="thankYou.php" method="post" id="orderForm">
         <!--Grabbing name information -->
         <div class = "form-group col-6">
-            <label for="name">Your Name:</label>
+            <label for="name">Your Name:*</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Please input your name.">
         </div><!-- Name information div-->
 
@@ -68,7 +65,6 @@ $cupcakeFlavors = array("grasshopper"=>"The Grasshopper", "maple"=>"Whiskey Mapl
 
 
 <?php
-include ("functions.php");
 
 ?>
 
