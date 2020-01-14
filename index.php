@@ -3,6 +3,8 @@
  *  Date Jan 12, 2019
  *  index.php
  * PHP Review Assigment: Cupcakes
+ * A website that allows a user to enter an order for some cupcakes. The name and
+ * at least one cupcake option is required.
  */
 //Turn on error reporting -- this is critical!
 ini_set('display_errors', 1);
